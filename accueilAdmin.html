@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>e-learning admin</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   
+<header class="header">
+  <img src="ntic-logo.png" style="width: 110px; margin: 0;" alt="ntic">
+    <h1 id="home">E-learning NTIC.</h1>
+    <span id="accountinfo">
+   
+      <h4> Benmohamed Amine</h4> 
+  
+     <svg xmlns="http://www.w3.org/2000/svg" style="padding:5px;" width="25"  fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </svg></span>
+</header>
+
+
+
+
+ <section class="container">
+  <svg id="sidebar" onclick="sidebar()" style="visibility: visible; cursor: pointer;top:100px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+  </svg>
+  <nav class="sidebar shadow">
+        
+    
+     <span  style=" display: inline-flex;margin-left: 10px;" >
+      <h3 >USERS:</h3> 
+      <span style="margin-left: 50px;"> 
+       
+       
+      <svg  onclick="updateuser()" style="cursor: pointer;"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+        <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
+      </svg> 
+      <svg onclick="adduser()" style="cursor: pointer;"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+      </svg>
+      <svg onclick="deleteuser()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-dash-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11 7.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+   </span></span> 
+
+
+      <span id="filter">
+         <button data-id="etudient" class="btn filterbtn" onclick="filter(1)">STUDENT</button>
+          <button data-id="enseignant" class="btn filterbtn" onclick="filter(2)">PROFESSOR</button> 
+          <button data-id="f" class="btn filterbtn" onclick="filter(3)">F</button> 
+          <button data-id="m" class="btn filterbtn" onclick="filter(4)">M</button>
+      </span> 
+
+
+      <div id="filtered"></div>
+      
+   
+</nav>
+
+
+
+
+
+<section class="main">
+
+  <div class="cover">
+
+
+    <h1>welcome back!</h1>
+    <h1 style="font-size:xx-large ;">Mr. Benmohamed Amine</h1>
+   <span style="display: inline-flex;">
+   
+    <h6 style="color:   rgb(122, 122, 122);" >From  :</h6> <h5 style="color: rgb(110, 238, 25);">University of constantine 2</h5>
+   </span>
+  
+  </div>
+
+  <div id="tabledubord" class="dashboard shadow">
+    <h2 >Dashboard</h2>
+    
+    <div id="dashboardhead">
+
+     <div style="width: 60%;">
+    <h1 style="color:   rgb(122, 122, 122);">Write an announcement..</h1>
+    <textarea  class="input shadow" name="text"placeholder="Enter text.." id="" cols="30" rows="10"></textarea>
+  <button class="btn shadow " style="width: 80px; height:40px; "> send</button>
+    </div>
+    
+
+    <div id="online" >
+      <span><svg xmlns="http://www.w3.org/2000/svg" style="background-color:rgb(164, 255, 103); display:inline; border-radius:100%; padding:10px; margin:5px;" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+          <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+          <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+        </svg><h4>Online users</h4></span>
+     <SPAN ><h5>&#9679</h5><h6> BESTA MALEK</h6></SPAN>
+     <SPAN><h5>&#9679</h5><h6> HAZOURLI MEHDI</h6></SPAN>
+  
+     <SPAN><h5>&#9679</h5><h6> BOUANAKA CHAFIA</h6></SPAN>
+     <SPAN><h5>&#9679</h5><h6> DAHMANI AMAR</h6></SPAN>
+     <SPAN><h5>&#9679</h5><h6> DJENOUHAT MANEL</h6></SPAN>
+     <SPAN><h5>&#9679</h5><h6> DARFA SARA</h6></SPAN>
+     <SPAN><h5>&#9679</h5><h6> BOURADA MAHA</h6></SPAN>
+     <SPAN><h5>&#9679</h5><h6> BENOULHA WAIL</h6></SPAN>
+     <SPAN><h5>&#9679</h5><h6> BENAMOUNE RAZANE</h6></SPAN>
+  
+  
+  
+      </div>
+<div id="manag-vis" style="  margin: 10px;"> 
+      <div id="visitors" class="shadow">
+       
+       <h5>Visitors Count:</h5>
+       <h2 style="font-size:xx-large; font-weight:900; margin: 2px;">5346 
+        </h2>
+     
+    <span style="color:rgb(164, 255, 103) ; font-size: small;">
+       <h5>+143(6% <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+         <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+       </svg>)</h5>
+     </span>
+   
+       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+       <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+     </svg>
+   
+    </div>
+    <div id="management" class="shadow" style="display: flex;">
+      <h1>Manage files</h1>
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+           <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+         </svg>
+       </div>
+   </div>
+   
+   
+ 
+    </div>
+ 
+  
+ <div  style="padding: 16px;border: solid black 2px; border-radius:20px;margin: 0px;">
+ <span style="background-color: black; margin: 0;color : white; padding:0 50px ; text-align: center; border-radius: 15px 15px 0 0;  " > Users </span>
+ <h4 style="background-color: black; width: 100%; padding: 8px; margin: 0;  color : white; word-spacing: 4cm;" >lastname   firstname    type   </h4>
+ <ul id="listusers">
+  </ul>
+ </div>
+  
+  </div>
+
+</section>
+
+
+
+</section>
+
+<div class="shadow tab-overlay update">
+  <button id="closetab" onclick="closetab()">
+       <svg    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+  </button>   
+  <h1 style="font-size: x-slarger;" >Update user info:</h1>
+  
+  <label for="fname"> First Name:</label>
+  <input class="input" id="inname1" type="text" name="fname" placeholder="enter new first name for user" >
+  
+  <label for="lname"> Last Name:</label>
+  <input class="input" id="inpren1" type="text" name="lname" placeholder="enter new last name for user">
+  <span>
+  <label for="sexe"> sexe:</label>
+      
+  <select name="sexe" id="type" >
+    <optgroup label="user sexe">
+  
+        <option id="teacher" value="0"> F</option>
+        <option id="student" value="1"> M</option>
+  
+    </optgroup>
+  </select>
+ 
+  <label for="user"> type:</label>
+      
+ <select name="user" id="type" >
+  <optgroup label="user type">
+
+      <option id="teacher" value="0"> teacher</option>
+      <option id="student" value="1"> student</option>
+      <option id="" value="2"> admin</option>
+
+  </optgroup>
+</select></span>
+<br>
+<br>
+  <label for="e-mail"> E-mail:</label>
+  <input class="input" id="inemail" type="text" name="e-mail" placeholder="your.name@univ-constantine2.dz">
+  <label for="password"> Password:</label>
+  <input class="input" type="password" name="password" placeholder="new password">
+  <h6 style="color: rgba(0, 0, 0, 0.324);">enter your password to save informations. </h6>
+  <input class="input" id="inpw" type="password" name="password" placeholder="password">
+
+  
+  <button class="btn" id="submit1"> Save </button>
+
+</div>
+
+
+<div class="shadow tab-overlay signup">
+  <button id="closetab" onclick="closetab()">
+       <svg    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+  </button>   
+  <h1 style="font-size: x-slarger;" >Create a new user:</h1>
+  
+  <label for="fname"> First Name:</label>
+  <input class="input" id="inname2" type="text" name="fname" placeholder="enter new first name for user" >
+<br>
+  
+  <label for="lname"> Last Name:</label>
+  <input class="input" id="inpren2" type="text" name="lname" placeholder="enter new last name for user">
+  <span>
+<br>
+
+  <label for="sexe"> sexe:</label>
+      
+  <select name="sexe" id="type" >
+    <optgroup label="user sexe">
+  
+        <option id="teacher" value="0"> F</option>
+        <option id="student" value="1"> M</option>
+  
+    </optgroup>
+  </select>
+ 
+  <label for="user"> type:</label>
+      
+ <select name="user" id="type" >
+  <optgroup label="user type">
+
+      <option id="teacher" value="0"> professor</option>
+      <option id="student" value="1"> student</option>
+      <option id="" value="2"> admin</option>
+
+  </optgroup>
+</select></span>
+<br>
+<label for="birth-date"> birth date:</label>
+<input class="input" type="date" name="birth-date" placeholder="new birth">
+
+<label for="@"> address:</label>
+<input class="input" type="text" name="@" placeholder="new address">
+<br>
+
+  <label for="e-mail"> E-mail:</label>
+  <input class="input" id="inemail" type="text" name="e-mail" placeholder="your.name@univ-constantine2.dz">
+   
+
+
+  
+  <h6 style="color: rgba(0, 0, 0, 0.324);">enter your password to save informations. </h6>
+  <input class="input" id="inpw" type="password" name="password" placeholder="password">
+
+  
+  <button class="btn"  id="submit2"> Save </button>
+
+</div>
+<footer>
+  Copyright © Université Abdelhamid Mehri - Constantine 2.   <br> 
+  Ce site repose sur la plateforme Moodle, sous licence libre. Il est maintenu par Dr.   Ali Sahnoun<br> 
+   Contact : elearning@univ-constantine2.dz<br> 
+  
+  
+</footer>
+<script type="text/javascript" src="scriptAdmin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>e-learning enseignant</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="style.scss">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   
+<header class="header">
+    <h1 id="home">E-learning NTIC.</h1>
+    <div class="accountinfo"></div>
+    
+    <span> nom</span> <span>prenom</span>
+   <span><svg xmlns="http://www.w3.org/2000/svg" width="25"  fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+      </svg></span>
+    <img src="" alt="">
+</header>
+
+
+
+
+ <section class="container">
+  <svg id="sidebar" onclick="sidebar()" style="visibility: hidden; cursor: pointer;top:100px;  color:rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+  </svg>
+  <nav class="sidebar shadow">
+        
+    <ul id="user-list"   >
+     <span>etudients :  </span> 
+   
+     <svg onclick="deleteuser()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-dash-fill" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M11 7.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+      <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+    </svg>
+     
+      </span>
+
+
+      <span id="filter">
+         <button  class="btn filterbtn" onclick="filter(1)">section 1</button>
+          <button  class="btn filterbtn" onclick="filter(2)">section 2</button> 
+          <button  class="btn filterbtn" onclick="filter(3)">groupe 1</button> 
+          <button class="btn filterbtn" onclick="filter(4)">groupe 2</button>
+          <button class="btn filterbtn" onclick="filter(5)">groupe 3</button>
+         <button  class="btn filterbtn" onclick="filter(6)">groupe 4</button>
+
+        </span> 
+
+
+      <div id="filtered"></div>
+      
+    </ul>
+</nav>
+
+
+
+
+
+<section class="main">
+   
+
+    
+
+<div class=" cover">
+
+
+  <h1>welcome back!</h1>
+  <h1 style="font-size:xx-large ;">Mr. enseignant</h1>
+  
+
+</div>
+
+<div class="tabledubord shadow">
+<div id="boardhead"  style="display: inline-flex; ">
+  <a href="accueilEnseignant.html">
+  <svg style="cursor: pointer;"  id="closetab" xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+  </svg></a> 
+  <h1 id="modulename" onload="displayname()">jnknn</h1>
+  <h1 style="font-size: x-large; padding: 15px;" >Update module schedule:</h1>
+</div>
+
+
+
+
+    <table id="moduletable" >
+   
+  <th>weeks</th><th >content</th><tr>
+<td>week 1:</td> <td class="cnt" onclick="selectedweek(this)">Syllabus </td></tr> 
+<td>week 2:</td> <td class="cnt" >Chapter 01</td><tr>
+  <td>week 3:</td> <td class="cnt" >Chapter 02</td><tr>
+    <td>week 4:</td> <td class="cnt" >Chapter 03</td>
+  </tr>
+</tr>
+    </table>
+<div id="modulebtns">
+
+  <button class="btn semaine shadow" onclick="addweek()">ADD<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-plus" viewBox="0 0 16 16">
+    <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+  </svg></button>
+
+
+    <button class="btn semaine shadow"> UPDATE
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg>
+    </button>
+   
+    <button class="btn semaine shadow">DELETE<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-x" viewBox="0 0 16 16">
+      <path d="M6.146 7.146a.5.5 0 0 1 .708 0L8 8.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 9l1.147 1.146a.5.5 0 0 1-.708.708L8 9.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 9 6.146 7.854a.5.5 0 0 1 0-.708z"/>
+      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+    </svg></button>
+    
+    
+  </div>  
+
+    <!-- /*
+    <div class="slider"> <span>
+      <label for="fader">Set number of hours: </label>
+      <input type="range" min="0" max="100" value="50" id="fader" 
+      step="20" list="volsettings">
+      <datalist id="volsettings">
+      <option>0</option>
+      <option>20</option>
+      <option>40</option>
+      <option>60</option>
+      <option>80</option>
+      <option>100</option>
+      </datalist>
+      <button onclick="nbh()" type="submit" class="btn">SET</button>
+
+      </span>
+      
+    </div>
+
+
+    <label for="user"> Deppartement:</label>
+        
+   <select name="user" id="dep" >
+    <optgroup label="Deppartement">
+  
+        <option  value="0"> Tronc commun</option>
+        <option  value="1"> TLSI</option>
+        <option  value="2"> IFA</option>
+  
+    </optgroup>
+  </select>
+  <br>
+  <label for="user"> hours/week:</label>
+        
+  <select  name="user" id="dep" >
+   <optgroup  label="Deppartement">
+ 
+       <option   value="0"> Tronc commun</option>
+       <option  value="1"> TLSI</option>
+       <option  value="2"> IFA</option>
+ 
+   </optgroup>
+ </select></span>
+  <br>
+  <span > -->
+       
+ </span>
+    <h6 style="color: rgba(0, 0, 0, 0.324);">enter your password to save informations. </h6>
+    <input class="input" id="inpw" type="password" name="password" placeholder="password">
+  
+    
+    <button class="btn shadow" type="submit" id="submit1"> Save </button>
+  
+ 
+</div>
+
+</section>
+
+
+
+</section>
+
+
+<div class="shadow tab-overlay insert">
+  <button id="closetab" onclick="closetab()">
+       <svg    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+  </button>   
+  <h1 style="font-size: x-slarger;" >Add weeks:</h1>
+  
+  <label for="fname"> Week number:</label>
+  <input class="input" id="weeknumber" type="number" name="nb" >
+  
+  <label for="lname"> Content </label>
+  <input class="input" id="content" type="text" name="cnt" placeholder="enter new last name for user">
+  <span>
+  <h6 style="color: rgba(0, 0, 0, 0.324);">enter your password to save informations. </h6>
+  <input class="input" id="inpw" type="password" name="password" placeholder="password">
+
+  
+  <button class="btn" type="submit" id="submit"> Save </button>
+
+</div>
+
+
+
+
+</body>
+</html>

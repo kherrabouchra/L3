@@ -1,0 +1,459 @@
+*{
+    font-family: 'Poppins', sans-serif;
+     margin: auto;
+     
+  }
+  body{
+    background-color: rgb(229, 229, 229);
+    position: relative;
+    min-height: 100vh;
+    
+        }
+.container{
+    
+        display: flex;
+background-color: rgb(229, 229, 229);
+margin-left:180px;
+padding-bottom: 1530px;
+
+ }
+nav{
+    overflow: scroll;
+}
+
+    
+.header{
+        position: relative;
+        height: 100Px;
+        display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color:black;
+    color: white; 
+    border-radius: 0Px 0px  30px 0;
+    right: 4px;
+    width: 100%;
+
+       
+     }
+    
+     
+
+a{ 
+    color: black;
+    font-size: large;
+    line-height: 30px;
+    display: inline;}
+#home{
+   left: 10px;
+   margin: 0;}
+#accountinfo{
+    display: flex;
+align-items: center;
+margin-right: 30px;
+justify-content: space-around;
+} 
+.sidebar {
+  list-style: none;
+  background-color: black;
+  text-align: left;
+  color: white; 
+position: absolute;
+top: 100px;
+left: 0; 
+height: 2000px;
+width: 200px;
+    overflow: scroll;
+}
+
+
+.sidebar li{
+    padding: 10px;
+
+}
+.sidebar li:hover{
+  cursor: pointer;
+  border-radius:0 20px 20px  0;
+  color: black;
+  background-color: white;
+  padding: 10px;
+ 
+}
+.selected { 
+    cursor: pointer;
+  color: rgb(0, 0, 0);
+  background-color: rgb(153, 255, 85);
+  padding: 10px;
+}
+
+.slidedown{
+    background-color: white;
+    border-radius: 25;
+    text-align: center;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 250px;
+    padding: 130px;
+    border-radius: 30px;
+    margin-top: 10%;
+    top: 100px;
+    
+}
+
+.btn {
+    margin: 15Px;
+    background-color: black;
+color: white;
+border-radius: 20px;
+border: none;
+}
+.btn:hover{
+    cursor: pointer;
+background-color: rgb(153, 255, 85);  /*transform: scale(1.3)*/}
+.filterbtn{
+    border-radius: 20px;
+    border: white solid 1px;
+    margin: 10px;
+    
+
+}
+.loginbtn  {
+width: 100px;
+font-size: large;
+}
+.tab-overlay {
+    position: fixed;
+    display: flex;
+flex-direction: column;
+padding: 50px 80px;
+background-color: white;backdrop-filter: blur(20px);
+width: 300px;
+border-radius: 30px;display: none;
+z-index: -10;
+overflow: scroll;
+max-width: 600px;
+left: 35%;
+top: 25%;
+right: 35%;
+}
+.signup, .update {
+  top:5%;
+
+}
+.signup{
+    width: 400px;
+}
+.tab-overlay  svg{
+    position: absolute;
+    top: 4%;
+    right: 8%;
+   text-align: left;
+}
+
+.tab-overlay svg:hover{
+   cursor:  pointer;
+}
+.open-overlay{display: block;
+  z-index: 10;}
+
+.input{
+    margin: 10px;
+    width: 80%;
+    border-radius: 13PX;
+    border-style:  solid ;
+    border-color: rgba(160, 160, 160, 0.728);
+    padding: 5px; align-self: center;
+}
+.shadow{-webkit-box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.13); 
+    box-shadow: 0px 0px 25px -2px rgba(0,0,0,0.13);
+}
+.blur{
+    
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  pointer-events: none;
+
+}
+.student{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#filter{
+    display: flex;
+    overflow: scroll;
+    justify-content: flex-start;
+ 
+
+}
+#filtered{
+}
+
+
+.opennav{
+display: initial;}
+@media only screen and (max-width: 600px) {
+    nav{
+display: none;  }
+    #sidebar{
+  top:20px;
+  color: rgb(255, 255, 255);
+
+  
+
+    }
+   #moduletable{
+    width: 10px;
+   }
+    .header{
+    z-index: -10;
+
+    }
+   .container{
+    margin-left:0 ;
+   }
+   
+    #home{
+      visibility: hidden; }
+   
+      
+  footer, #manag-vis ,#online{
+    display: none;
+   }
+   #online2{
+    display: block;
+   }
+  }
+
+
+.main{
+    height: 600px;
+width: 100%;
+}
+.cover{
+    padding: 20px;
+    margin: 30px;
+} 
+
+
+/*enseignant*/
+
+.selectedweek { 
+    color: white;
+    background-color: black;
+    
+  }
+.dashboard{
+    padding: 30px;
+    margin: 40px;
+    border-radius: 20px;
+background-color:  rgb(255, 255, 255); 
+
+}
+#dashboardhead{
+    display: flex;
+    align-items: flex-start;
+    
+  
+    
+}
+.dashboard .moduleconf{
+    padding: 50px;
+    border-radius: 20px;
+    display: none;  
+      margin: 25px;
+
+
+
+
+}
+.module{
+    margin: 25px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    height: 100%;
+}
+.module h3{
+font-size:medium;
+font-weight:900;
+padding: 5px;
+}
+
+.module button{
+    background-color: rgb(228, 228, 228);
+    border-radius: 15px;
+    border: none;
+    width: 90%;
+    height: 100px;
+    cursor: pointer;
+    display: inline-flex;
+    margin: 15px;
+    align-self: center;
+}
+.module button:hover{
+   background-color: black;
+   color: white;
+}
+.module button:active{
+
+background-color: rgb(106, 253, 73);
+}
+
+
+
+#moduletable{
+    width: 50%;
+    border: black 2px solid;
+}
+#moduletable th,td{
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom:black 2px solid; 
+    
+}
+#moduletable td.cnt:hover{
+background-color: rgb(106, 253, 73);
+color: rgb(54, 54, 54);
+}
+#moduletable td.consult:hover{
+    background-color: rgb(106, 253, 73);
+color: rgb(54, 54, 54);
+
+}
+
+.weekconsult {
+visibility: hidden;
+position: absolute;
+}
+
+.weekconsultopen { 
+ visibility: visible;
+ position: relative;
+
+
+
+}
+tr.weekconsult.weekconsultopen {
+
+}
+.weekbtn{
+    display: flex;
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+     align-items: center;   
+}
+#modulebtns{
+    display: flex;
+justify-content: center;
+}
+
+
+.module h6{
+  color:   rgb(122, 122, 122);
+  font-size: small;
+}
+
+#announce{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    height: 180px;
+    width: 180px;
+padding: 15px;    
+text-align: left;
+word-spacing: 5vh;
+overflow: hidden;
+
+}
+#announce h4{
+    position: relative;
+animation: mymove 12s infinite;
+animation-timing-function: linear;
+display:inline;
+}
+@keyframes mymove {
+    from {right: 0px;}
+    to {right: 100% ;}
+
+
+  }
+
+
+
+
+/*admin*/
+#online{
+    border-radius: 20px;
+    border: solid black 2px;
+    height: 270px;
+    width: 230px;
+padding: 6px;    
+text-align: left;
+background-color: rgba(255, 255, 255, 0.314);
+color: black;
+overflow: scroll;
+margin: 20px;
+}
+#online span{
+    display: inline-flex;
+    }
+    #online h5{
+        color: rgb(80, 225, 73);
+margin: 5px;    }
+footer {
+   text-align: center;
+   height: 120px;
+    padding: 5px;
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.833);
+    position: absolute;
+    bottom: 0;
+   width: 100%;
+    font-size: x-small;
+    z-index: 10;
+}
+
+#visitors{
+    background-color: #000000;
+    color: white;
+    text-align:  center;
+    border-radius: 20px;
+    width: 150px;
+    padding: 30px;
+    margin:20px;
+    right: 0;
+}
+
+#management{
+    background-color: rgb(164, 255, 103);
+    border-radius: 15px;
+    padding: 10px;
+   cursor: pointer;
+     font-size: large;
+     width: 70%;
+    margin:20px;
+    height: 40px;
+
+
+}
+
+#listusers li{
+    list-style: none;
+    cursor: pointer;
+   
+    word-spacing: 5cm;
+    padding: 5px;
+    width: 85%;
+    border-radius: 20px;
+}
+#listusers li:hover{ 
+    -webkit-transform: scale(1.2);
+background-color: #00000019; }
